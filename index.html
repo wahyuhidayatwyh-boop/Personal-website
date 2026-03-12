@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wahyu Hidayat — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="navbar-premium fixed-top">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a class="logo d-flex align-items-center gap-2 text-decoration-none" href="#home">
+          <span class="logo-badge">W</span>
+          <span class="logo-text">Whyuhdyat<span class="text-primary">.</span></span>
+        </a>
+
+        <nav class="nav-links d-none d-md-flex align-items-center gap-4">
+          <a href="#home">Home</a>
+          <a href="#about">About Me</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#skills">Skills</a>
+        </nav>
+
+        <div class="d-none d-md-flex">
+          <a class="btn btn-primary-custom" href="#contact">Start Project <i class="bi bi-arrow-right"></i></a>
+        </div>
+
+        <button class="menu-toggle d-md-none" id="mobileMenuBtn" aria-label="Toggle menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+
+      <div class="mobile-nav d-md-none" id="mobileMenu">
+        <div class="container">
+          <div class="mobile-nav-card">
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#skills">Skills</a>
+            <a class="btn btn-primary-custom w-100 mt-2" href="#contact">Start Project</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero-section bg-grid-pattern">
+        <div class="hero-glow"></div>
+        <div class="container hero-content">
+          <div class="hero-grid">
+            <div class="hero-copy text-center text-lg-start">
+              <div class="pill">
+                <span class="dot"></span>
+                Available for new opportunities
+              </div>
+              <h1 class="hero-title">
+                Hii I am <span class="text-gradient">Wahyu</span><br />
+                Hidayat.
+              </h1>
+              <div class="hero-nim">NIM: 2311102178</div>
+              <h3 class="hero-subtitle">
+                Innovate. Develop. Succeed. <span class="text-gradient">Fast.</span>
+              </h3>
+              <p class="hero-desc">
+                Mahasiswa Informatika Telkom University yang berfokus pada pengembangan solusi web inovatif berbasis IoT
+                dan analisis data.
+              </p>
+              <div class="hero-actions justify-content-center justify-content-lg-start">
+                <a class="btn btn-primary-custom" href="#contact">Get a Free Quote <i class="bi bi-arrow-right"></i></a>
+                <a class="btn btn-outline-custom" href="#services">Our Services</a>
+              </div>
+              <div class="hero-social text-center text-lg-start">
+                <p>Trusted by businesses worldwide</p>
+                <div class="social-row justify-content-center justify-content-lg-start">
+                  <a href="https://github.com/Wahyu101101" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+                  <a href="https://instagram.com/whyuhdyat___" target="_blank" rel="noopener noreferrer"><i class="bi bi-instagram"></i></a>
+                  <a href="http://www.linkedin.com/in/wahyu-hidayat-2267103b4" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="hero-photo">
+              <div class="hero-photo-frame">
+                <img src="Image/foto1.png" alt="Foto profil Wahyu Hidayat" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="ticker">
+        <div class="ticker-track">
+          <span>E-Commerce Platform Build</span><i class="bi bi-star-fill"></i>
+          <span>Scalable</span><i class="bi bi-star-fill"></i>
+          <span>SaaS Dashboard</span><i class="bi bi-star-fill"></i>
+          <span>High Performance</span><i class="bi bi-star-fill"></i>
+          <span>Corporate Website</span><i class="bi bi-star-fill"></i>
+          <span>Responsive</span><i class="bi bi-star-fill"></i>
+          <span>Web Application</span><i class="bi bi-star-fill"></i>
+          <span>Modern Stack</span><i class="bi bi-star-fill"></i>
+          <span>UI/UX Revamp</span><i class="bi bi-star-fill"></i>
+          <span>User Centric</span><i class="bi bi-star-fill"></i>
+        </div>
+      </div>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <div class="about-photo">
+                <img src="Image/foto2.jpeg" alt="Foto Wahyu Hidayat" />
+                <div class="about-badge">
+                  <div class="about-badge-number">3+</div>
+                  <div class="about-badge-label">Main Projects</div>
+                  <p class="about-badge-text">Integrasi IoT & Web untuk solusi bisnis yang presisi.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="section-kicker">
+                <span></span>
+                About the Founder
+              </div>
+              <h2 class="section-title">
+                Web Developer Terobsesi dengan <br />
+                <span class="text-gradient">IoT & Presisi Data</span>
+              </h2>
+              <p class="section-desc">
+                Mahasiswa Informatika Telkom University dengan hasrat mendalam pada integrasi web, IoT, dan analisis
+                data. Berfokus pada penciptaan solusi digital inovatif yang fungsional dan berdampak nyata bagi bisnis
+                dan industri.
+              </p>
+              <ul class="check-list">
+                <li>Gold Award Recipient @ Inovatech Recognition 2025</li>
+                <li>Keahlian di IoT, Data Analysis, & Jaringan</li>
+                <li>Alumni SMK Telkom Banjarbaru dan Mahasiswa Telkom University Purwokerto</li>
+              </ul>
+              <div class="api-card">
+                <div class="api-header">
+                  <div class="api-icon"><i class="bi bi-lightning-charge"></i></div>
+                  <div>
+                    <div class="api-title">Motivational Quote (AJAX)</div>
+                    <div class="api-subtitle">Live update dari public API</div>
+                  </div>
+                </div>
+                <div id="quoteText">Loading quote...</div>
+                <div id="quoteAuthor" class="api-author"></div>
+                <button id="refreshQuote" class="btn btn-outline-custom mt-3">Refresh Quote</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section section-soft">
+        <div class="container">
+          <div class="text-center mb-4">
+            <div class="section-kicker center">
+              <span></span>Education<span></span>
+            </div>
+            <h2 class="section-title">Riwayat Pendidikan</h2>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card-premium">
+                <h4>Telkom University</h4>
+                <p>S1 Informatika</p>
+                <small>2023 - Sekarang</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-premium">
+                <h4>SMK Telkom Banjarbaru</h4>
+                <p>Teknik Komputer & Jaringan</p>
+                <small>2020 - 2023</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-premium">
+                <h4>Pelatihan & Sertifikasi</h4>
+                <p>IoT, Cloud, Networking</p>
+                <small>Berjalan</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-strip">
+        <div class="container">
+          <div class="row text-center g-4">
+            <div class="col-6 col-lg-3">
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="stat-number">1+</div>
+              <div class="stat-label">Happy Client</div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="stat-number">6+</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="col-6 col-lg-3">
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Awards Won</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <div class="text-center mb-5">
+            <div class="section-kicker center">
+              <span></span>Our Services<span></span>
+            </div>
+            <h2 class="section-title">Comprehensive Digital <br /> Solutions</h2>
+            <p class="section-desc">We provide end-to-end services to help your business thrive in the digital landscape.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card-premium">
+                <div class="icon-box"><i class="bi bi-layout-text-window"></i></div>
+                <h4>Web Design & UI/UX</h4>
+                <p>Menciptakan antarmuka yang intuitif dan visual yang menarik menggunakan prinsip desain modern.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card-premium">
+                <div class="icon-box"><i class="bi bi-code-slash"></i></div>
+                <h4>Vibe Coding & Frontend</h4>
+                <p>Membangun frontend yang responsif dan interaktif dengan pendekatan efisien melalui metode Vibe Coding.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card-premium">
+                <div class="icon-box"><i class="bi bi-cart"></i></div>
+                <h4>IoT Solutions</h4>
+                <p>Menghubungkan perangkat fisik ke dunia digital untuk efisiensi dan otomasi berbasis industri 4.0.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card-premium">
+                <div class="icon-box"><i class="bi bi-search"></i></div>
+                <h4>Big Data & Analysis</h4>
+                <p>Mengolah dan menganalisis data kompleks untuk memberikan wawasan yang mendalam bagi pengambilan keputusan.</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card-premium">
+                <div class="icon-box"><i class="bi bi-lightning-charge"></i></div>
+                <h4>Network Engineering</h4>
+                <p>Perancangan dan pengelolaan infrastruktur jaringan yang aman serta optimal (Fiber Optic & VPN).</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card-premium">
+                <div class="icon-box"><i class="bi bi-cloud"></i></div>
+                <h4>Cloud Computing</h4>
+                <p>Implementasi solusi berbasis cloud menggunakan teknologi terbaru seperti IBM Cloud dan AWS.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="section section-soft">
+        <div class="container">
+          <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-3 mb-4">
+            <div>
+              <div class="section-kicker"><span></span>Selected Work</div>
+              <h2 class="section-title">My Digital <span class="text-gradient">Footprints</span></h2>
+            </div>
+            <div class="filter-row" id="portfolioFilters">
+              <button data-filter="All" class="filter-btn active">All</button>
+              <button data-filter="Prestasi" class="filter-btn">Prestasi</button>
+              <button data-filter="Developer" class="filter-btn">Developer</button>
+              <button data-filter="IoT" class="filter-btn">IoT</button>
+              <button data-filter="Organisasi" class="filter-btn">Organisasi</button>
+              <button data-filter="Lisensi" class="filter-btn">Lisensi</button>
+            </div>
+          </div>
+          <div class="row g-4" id="portfolioGrid">
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Prestasi" data-featured="true">
+              <div class="portfolio-card">
+                <img src="Image/lomba1.jpg" alt="Lomba 1" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Prestasi</span>
+                  <div class="portfolio-title">
+                    Inovatech 2025
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Prestasi">
+              <div class="portfolio-card">
+                <img src="Image/lomba2.jpeg" alt="Lomba 2" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Prestasi</span>
+                  <div class="portfolio-title">
+                    Inkubasi Bisnis BTP
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Prestasi">
+              <div class="portfolio-card">
+                <img src="Image/lomba3.png" alt="Lomba 3" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Prestasi</span>
+                  <div class="portfolio-title">
+                    Essay Inovasi Teknologi
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Developer" data-featured="true">
+              <div class="portfolio-card">
+                <img src="Image/dev1.png" alt="Frontend Mitra Cukurmen" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Developer</span>
+                  <div class="portfolio-title">
+                    Frontend Mitra Cukurmen
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Developer">
+              <div class="portfolio-card">
+                <img src="Image/dev2.png" alt="Fullstack Aplikasi Mobile MBG" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Developer</span>
+                  <div class="portfolio-title">
+                    Fullstack Aplikasi Mobile MBG
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Developer">
+              <div class="portfolio-card">
+                <img src="Image/dev3.png" alt="Frontend Portfolio" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Developer</span>
+                  <div class="portfolio-title">
+                    Frontend Portofolio
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="IoT" data-featured="true">
+              <div class="portfolio-card">
+                <img src="Image/iot1.png" alt="Integrasi Blynk ESP32" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">IoT</span>
+                  <div class="portfolio-title">
+                    Integrasi Blynk ESP32
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="IoT">
+              <div class="portfolio-card">
+                <img src="Image/iot2.png" alt="Simulator Zero Downtime Aplikasi" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">IoT</span>
+                  <div class="portfolio-title">
+                    Simulator Zero Downtime Aplikasi
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="IoT">
+              <div class="portfolio-card">
+                <img src="Image/iot3.jpeg" alt="Pelatihan IoT Web" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">IoT</span>
+                  <div class="portfolio-title">
+                    Pelatihan IoT Web
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Organisasi" data-featured="true">
+              <div class="portfolio-card">
+                <img src="Image/organisasi1.png" alt="Hipmi PT Harmoni Eksternal" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Organisasi</span>
+                  <div class="portfolio-title">
+                    Hipmi PT Harmoni Eksternal
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Organisasi" data-featured="true">
+              <div class="portfolio-card">
+                <img src="Image/organisasi2.png" alt="Wakil Ketua Umum Telcomnicavoice" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Organisasi</span>
+                  <div class="portfolio-title">
+                    Wakil Ketua Umum Telcomnicavoice
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Organisasi">
+              <div class="portfolio-card">
+                <img src="Image/organisasi3.png" alt="Staff Divisi Syiar SKI" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Organisasi</span>
+                  <div class="portfolio-title">
+                    Staff Divisi Syiar SKI
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Organisasi">
+              <div class="portfolio-card">
+                <img src="Image/organisasi4.png.jpeg" alt="Ketua Pelaksana Pre-Competition" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Organisasi</span>
+                  <div class="portfolio-title">
+                    Ketua Pelaksana Pre-Competition
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Organisasi">
+              <div class="portfolio-card">
+                <img src="Image/organisasi5.png" alt="Ketua Umum SKI" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Organisasi</span>
+                  <div class="portfolio-title">
+                    Ketua Umum SKI
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Lisensi" data-featured="true">
+              <div class="portfolio-card">
+                <img src="Image/sertif1.png" alt="Big Data 101" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Lisensi</span>
+                  <div class="portfolio-title">
+                    Big Data 101
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Lisensi">
+              <div class="portfolio-card">
+                <img src="Image/sertif2.png" alt="NoSQL and DBaaS 101" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Lisensi</span>
+                  <div class="portfolio-title">
+                    NoSQL and DBaaS 101
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Lisensi">
+              <div class="portfolio-card">
+                <img src="Image/sertif3.png" alt="Introduction to Cybersecurity" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Lisensi</span>
+                  <div class="portfolio-title">
+                    Introduction to Cybersecurity
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Lisensi">
+              <div class="portfolio-card">
+                <img src="Image/sertif4.png" alt="Junior Network Administrator" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Lisensi</span>
+                  <div class="portfolio-title">
+                    Sertifikat Kompetensi � Junior Network Administrator
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 portfolio-item" data-category="Lisensi">
+              <div class="portfolio-card">
+                <img src="Image/sertif5.png" alt="AWS Academy Graduate - Cloud Foundations" />
+                <div class="portfolio-overlay"></div>
+                <div class="portfolio-meta">
+                  <span class="badge-glow">Lisensi</span>
+                  <div class="portfolio-title">
+                    AWS Academy Graduate - Cloud Foundations
+                    <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+            <section id="skills" class="section">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+              <div class="section-kicker">
+                <span></span>
+                Skill Stack
+              </div>
+              <h2 class="section-title">Expertise & Technical Skills</h2>
+              <p class="section-desc">
+                Constantly learning and evolving. Here is a snapshot of my core competencies in building innovative
+                solutions, from web interfaces to industrial IoT systems.
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <div class="skill-item">
+                <div class="skill-head"><span>Web &amp; Software (Frontend, UI/UX, Vibe Coding)</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-skill="85"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-head"><span>Advanced Tech (IoT, Data Analysis, Big Data)</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-skill="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-head"><span>Infrastructure (Network Engineering, Cloud, Cyber Security)</span><span>82%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-skill="82"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-head"><span>Leadership &amp; Management (Ketua SKI, Public Speaking)</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-skill="90"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-head"><span>Cognitive Skills (Problem Solving)</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" data-skill="90"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><section id="contact" class="section">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-6">
+              <div class="section-kicker">
+                <span></span>
+                Get In Touch
+              </div>
+              <h2 class="section-title">
+                Let's Discuss Your <br />
+                <span class="text-gradient">Next Project</span>
+              </h2>
+              <p class="section-desc">
+                Have an idea? Need help building a digital product? I'm currently available for freelance work and new opportunities.
+              </p>
+              <div class="contact-item">
+                <div class="icon-box"><i class="bi bi-envelope"></i></div>
+                <div>
+                  <div class="contact-label">Email Me</div>
+                  <a href="mailto:wahyuhidayat.wyh@gmail.com">wahyuhidayat.wyh@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="icon-box"><i class="bi bi-telephone"></i></div>
+                <div>
+                  <div class="contact-label">Call Me</div>
+                  <a href="tel:+1234567890">083843653251</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="icon-box"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <div class="contact-label">Location</div>
+                  <span>Purwokerto, Jawa Tengah, Indonesia</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card-premium">
+                <h3>Send a Message</h3>
+                <form class="contact-form">
+                  <input type="text" placeholder="Your Name" />
+                  <input type="email" placeholder="Email Address" />
+                  <input type="text" placeholder="Subject" />
+                  <textarea rows="4" placeholder="Tell me about your project..."></textarea>
+                  <button type="button" class="btn btn-primary-custom w-100">Send Message <i class="bi bi-send"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-brand">
+          <span class="logo-badge small">W</span>
+          <span class="logo-text">Whyuhdyat<span class="text-primary">.</span></span>
+        </div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-copy">© 2026 Wahyu Hidayat. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
