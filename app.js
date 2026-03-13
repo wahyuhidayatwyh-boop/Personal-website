@@ -80,21 +80,27 @@ const skillObserver = new IntersectionObserver(
 );
 skillBars.forEach((bar) => skillObserver.observe(bar));
 
-// Testimonials slider
-let currentTestimonial = 0;
+// Testimonials slider (guarded if section removed)
 const track = document.getElementById("testimonialTrack");
-const total = track.children.length;
-const updateTestimonials = () => {
-  track.style.transform = `translateX(-${currentTestimonial * 100}%)`;
-};
-document.getElementById("prevTestimonial").addEventListener("click", () => {
-  currentTestimonial = (currentTestimonial - 1 + total) % total;
-  updateTestimonials();
-});
-document.getElementById("nextTestimonial").addEventListener("click", () => {
-  currentTestimonial = (currentTestimonial + 1) % total;
-  updateTestimonials();
-});
+if (track) {
+  let currentTestimonial = 0;
+  const total = track.children.length;
+  const updateTestimonials = () => {
+    track.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+  };
+  const prevBtn = document.getElementById("prevTestimonial");
+  const nextBtn = document.getElementById("nextTestimonial");
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener("click", () => {
+      currentTestimonial = (currentTestimonial - 1 + total) % total;
+      updateTestimonials();
+    });
+    nextBtn.addEventListener("click", () => {
+      currentTestimonial = (currentTestimonial + 1) % total;
+      updateTestimonials();
+    });
+  }
+}
 
 // AJAX quote fetch
 const quoteText = document.getElementById("quoteText");
