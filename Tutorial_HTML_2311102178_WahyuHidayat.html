@@ -1,13 +1,13 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wahyu Hidayat — Portfolio</title>
+    <title>Wahyu Hidayat â€” Portfolio</title>
     <link
       rel="icon"
       type="image/svg+xml"
-      href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='22'%20fill='%2300a2ff'/%3E%3Ctext%20x='50'%20y='64'%20font-size='60'%20text-anchor='middle'%20fill='white'%20font-family='Arial,%20sans-serif'%20font-weight='700'%3EW%3C/text%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Crect%20width='100'%20height='100'%20rx='22'%20fill='%23000000'/%3E%3Ctext%20x='50'%20y='64'%20font-size='60'%20text-anchor='middle'%20fill='white'%20font-family='Arial,%20sans-serif'%20font-weight='700'%3EW%3C/text%3E%3C/svg%3E"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -29,12 +29,12 @@
     <style>
 /* Base */
 :root {
-  --bg: #0a0a0d;
-  --fg: #f7f7f7;
-  --muted: #a1a1b5;
-  --border: #23232e;
-  --primary: #8b5cf6;
-  --accent: #ff3ba7;
+  --bg: #f7f7f5;
+  --fg: #111111;
+  --muted: #595959;
+  --border: #d8d8d8;
+  --primary: #111111;
+  --accent: #6f6f6f;
 }
 
 body {
@@ -62,16 +62,16 @@ a {
 }
 
 .section-soft {
-  background: rgba(20, 20, 27, 0.4);
-  border-top: 1px solid rgba(35, 35, 46, 0.5);
-  border-bottom: 1px solid rgba(35, 35, 46, 0.5);
+  background: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .bg-grid-pattern {
   background-size: 40px 40px;
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
 }
 
 /* Navbar */
@@ -82,9 +82,9 @@ a {
 }
 
 .navbar-premium.scrolled {
-  background: rgba(10, 10, 13, 0.85);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(35, 35, 46, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .logo-badge {
@@ -146,8 +146,8 @@ a {
 }
 
 .mobile-nav-card {
-  background: rgba(20, 20, 27, 0.9);
-  border: 1px solid rgba(35, 35, 46, 0.6);
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   padding: 1rem;
   display: grid;
@@ -163,7 +163,7 @@ a {
 .btn-primary-custom {
   background: var(--primary);
   border-color: var(--primary);
-  color: #fff;
+  color: #ffffff;
   border-radius: 999px;
   padding: 0.85rem 1.6rem;
   font-weight: 600;
@@ -196,7 +196,7 @@ a {
   transform: translateX(-50%);
   width: 800px;
   height: 400px;
-  background: rgba(139, 92, 246, 0.2);
+  background: rgba(0, 0, 0, 0.08);
   filter: blur(120px);
   border-radius: 999px;
   pointer-events: none;
@@ -224,12 +224,12 @@ a {
   border-radius: 26px;
   padding: 12px;
   background:
-    radial-gradient(circle at top, rgba(139, 92, 246, 0.28), transparent 60%),
-    linear-gradient(160deg, rgba(18, 18, 26, 0.9), rgba(12, 12, 18, 0.95));
-  border: 1px solid rgba(139, 92, 246, 0.22);
+    radial-gradient(circle at top, rgba(0, 0, 0, 0.08), transparent 60%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(245, 245, 245, 0.98));
+  border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow:
-    0 24px 60px rgba(10, 10, 16, 0.7),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    0 24px 60px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.03);
   position: relative;
   transform: rotate(-1.5deg);
 }
@@ -239,7 +239,7 @@ a {
   position: absolute;
   inset: 10px;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   pointer-events: none;
 }
 
@@ -256,8 +256,8 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #15151f;
-  border: 1px solid rgba(35, 35, 46, 0.7);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 999px;
   padding: 0.5rem 1rem;
   color: var(--muted);
@@ -269,7 +269,7 @@ a {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #22c55e;
+  background: #d4d4d4;
 }
 
 .hero-title {
@@ -342,11 +342,11 @@ a {
 
 /* Ticker */
 .ticker {
-  background: var(--primary);
-  color: #fff;
+  background: #ffffff;
+  color: #111111;
   overflow: hidden;
-  border-top: 1px solid rgba(139, 92, 246, 0.2);
-  border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .ticker-track {
@@ -377,8 +377,8 @@ a {
   width: 6px;
   height: 6px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.08);
 }
 
 @keyframes ticker-scroll {
@@ -430,12 +430,12 @@ a {
   overflow: hidden;
   padding: 12px;
   background:
-    radial-gradient(circle at top, rgba(139, 92, 246, 0.22), transparent 60%),
-    linear-gradient(160deg, rgba(18, 18, 26, 0.92), rgba(12, 12, 18, 0.96));
-  border: 1px solid rgba(139, 92, 246, 0.22);
+    radial-gradient(circle at top, rgba(0, 0, 0, 0.08), transparent 60%),
+    linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(245, 245, 245, 0.98));
+  border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow:
-    0 22px 50px rgba(10, 10, 16, 0.65),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    0 22px 50px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.03);
   max-width: 400px;
   margin: 0 auto;
 }
@@ -454,12 +454,12 @@ a {
   position: absolute;
   right: 16px;
   bottom: 16px;
-  background: rgba(20, 20, 27, 0.9);
-  border: 1px solid rgba(35, 35, 46, 0.6);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   padding: 0.9rem 1.1rem;
   max-width: 200px;
-  box-shadow: 0 18px 40px rgba(10, 10, 13, 0.45);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(10px);
   display: grid;
   gap: 0.35rem;
@@ -491,7 +491,7 @@ a {
 .quote-box {
   border-left: 4px solid var(--primary);
   padding: 1rem 1.2rem;
-  background: rgba(20, 20, 27, 0.6);
+  background: rgba(255, 255, 255, 0.9);
   border-radius: 0 16px 16px 0;
   margin: 1.5rem 0;
 }
@@ -513,20 +513,20 @@ a {
 }
 
 .check-list li::before {
-  content: "✓";
+  content: "âœ“";
   color: var(--accent);
   margin-right: 0.5rem;
 }
 
 .api-card {
-  border: 1px solid rgba(139, 92, 246, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 18px;
   padding: 1.1rem 1.2rem;
   background:
-    linear-gradient(160deg, rgba(18, 18, 26, 0.92), rgba(12, 12, 18, 0.96));
+    linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(245, 245, 245, 0.98));
   box-shadow:
-    0 18px 40px rgba(10, 10, 16, 0.55),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+    0 18px 40px rgba(0, 0, 0, 0.07),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.03);
   display: grid;
   gap: 0.75rem;
 }
@@ -569,8 +569,8 @@ a {
   width: 42px;
   height: 42px;
   border-radius: 14px;
-  background: rgba(139, 92, 246, 0.2);
-  border: 1px solid rgba(139, 92, 246, 0.35);
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -591,8 +591,8 @@ a {
 
 /* Cards */
 .card-premium {
-  background: rgba(20, 20, 27, 0.7);
-  border: 1px solid rgba(35, 35, 46, 0.6);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 18px;
   padding: 1.5rem;
   height: 100%;
@@ -600,8 +600,8 @@ a {
 
 #education .card-premium {
   background:
-    linear-gradient(160deg, rgba(139, 92, 246, 0.22), rgba(20, 20, 27, 0.75));
-  border: 1px solid rgba(139, 92, 246, 0.4);
+    linear-gradient(160deg, rgba(255, 255, 255, 1), rgba(244, 244, 244, 0.98));
+  border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .card-premium h4 {
@@ -627,9 +627,9 @@ a {
 /* Stats */
 .stats-strip {
   padding: 3rem 0;
-  border-top: 1px solid rgba(35, 35, 46, 0.5);
-  border-bottom: 1px solid rgba(35, 35, 46, 0.5);
-  background: rgba(20, 20, 27, 0.3);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.88);
 }
 
 .stat-number {
@@ -662,7 +662,7 @@ a {
 
 .filter-btn.active {
   background: var(--primary);
-  color: #fff;
+  color: #ffffff;
   border-color: var(--primary);
 }
 
@@ -670,13 +670,18 @@ a {
   border-radius: 18px;
   overflow: hidden;
   position: relative;
-  border: 1px solid rgba(35, 35, 46, 0.6);
-  background: #15151f;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  isolation: isolate;
 }
 
 .portfolio-card img {
   width: 100%;
+  aspect-ratio: 4 / 3;
   height: auto;
+  object-fit: cover;
+  object-position: center;
   display: block;
   transition: transform 0.7s ease;
 }
@@ -706,6 +711,7 @@ a {
   opacity: 0;
   transform: translateY(10px);
   transition: all 0.3s ease;
+  color: #ffffff;
 }
 
 .portfolio-card:hover .portfolio-meta {
@@ -717,8 +723,8 @@ a {
   display: inline-block;
   padding: 0.25rem 0.75rem;
   border-radius: 999px;
-  background: rgba(139, 92, 246, 0.2);
-  border: 1px solid rgba(139, 92, 246, 0.4);
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   font-size: 0.75rem;
 }
 
@@ -754,9 +760,9 @@ a {
 
 .skill-bar {
   height: 10px;
-  background: #1d1d28;
+  background: #ededed;
   border-radius: 999px;
-  border: 1px solid rgba(35, 35, 46, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.12);
   overflow: hidden;
 }
 
@@ -780,13 +786,13 @@ a {
 .testimonial-card {
   flex: 0 0 100%;
   padding: 2rem;
-  background: rgba(20, 20, 27, 0.7);
-  border: 1px solid rgba(35, 35, 46, 0.6);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
 
 .stars {
-  color: #ffd65a;
+  color: #e7e7e7;
   margin-bottom: 1rem;
 }
 
@@ -849,8 +855,8 @@ a {
 
 .contact-form input,
 .contact-form textarea {
-  background: #12121a;
-  border: 1px solid rgba(35, 35, 46, 0.6);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   color: var(--fg);
   border-radius: 12px;
   padding: 0.75rem 1rem;
@@ -858,7 +864,7 @@ a {
 
 /* Footer */
 .footer {
-  border-top: 1px solid rgba(35, 35, 46, 0.6);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding: 2rem 0;
 }
 
@@ -944,12 +950,11 @@ a {
                 Hii I am <span class="text-gradient">Wahyu</span><br />
                 Hidayat.
               </h1>
-              <div class="hero-nim">NIM: 2311102178</div>
               <h3 class="hero-subtitle">
                 Innovate. Develop. Succeed. <span class="text-gradient">Fast.</span>
               </h3>
               <p class="hero-desc">
-                Mahasiswa Informatika Telkom University yang berfokus pada pengembangan solusi web inovatif berbasis IoT
+                Mahasiswa Informatika Telkom University yang berfokus pada pengembangan solusi web dan mobile yanginovatif berbasis IoT
                 dan analisis data.
               </p>
               <div class="hero-actions justify-content-center justify-content-lg-start">
@@ -1115,7 +1120,7 @@ a {
             <div class="col-md-6 col-lg-4">
               <div class="card-premium">
                 <div class="icon-box"><i class="bi bi-code-slash"></i></div>
-                <h4>Vibe Coding & Frontend</h4>
+                <h4>Vibe Coding & Fullstack Development</h4>
                 <p>Membangun frontend yang responsif dan interaktif dengan pendekatan efisien melalui metode Vibe Coding.</p>
               </div>
             </div>
@@ -1400,7 +1405,7 @@ a {
                 <div class="portfolio-meta">
                   <span class="badge-glow">Lisensi</span>
                   <div class="portfolio-title">
-                    Sertifikat Kompetensi � Junior Network Administrator
+                    Sertifikat Kompetensi ï¿½ Junior Network Administrator
                     <span class="badge-circle"><i class="bi bi-arrow-up-right"></i></span>
                   </div>
                 </div>
@@ -1529,7 +1534,7 @@ a {
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
         </div>
-        <div class="footer-copy">© 2026 Wahyu Hidayat. All rights reserved.</div>
+        <div class="footer-copy">Â© 2026 Wahyu Hidayat. All rights reserved.</div>
       </div>
     </footer>
 
@@ -1673,7 +1678,7 @@ async function loadQuote() {
     try {
       const result = await getQuote();
       quoteText.textContent = result.text || "Stay positive. Work hard. Make it happen.";
-      quoteAuthor.textContent = result.author ? `— ${result.author}` : "— Anonymous";
+      quoteAuthor.textContent = result.author ? `â€” ${result.author}` : "â€” Anonymous";
       return;
     } catch (err) {
       console.warn("Quote source failed:", err);
