@@ -35,6 +35,10 @@
         position: sticky;
         top: 0;
         z-index: 100;
+        background: transparent; /* Initially transparent */
+        transition: background 0.3s ease, backdrop-filter 0.3s ease, border-bottom 0.3s ease;
+      }
+      .topbar.scrolled {
         background: rgba(255, 255, 255, 0.95);
         backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
@@ -175,6 +179,12 @@
         .activity-desc {
           font-size: 0.8rem;
           line-height: 1.45;
+        }
+      }
+
+      @media (max-width: 575.98px) { /* Extra small screens */
+        .activity-grid {
+          grid-template-columns: repeat(1, minmax(0, 1fr)); /* 1 column */
         }
       }
     </style>
@@ -405,5 +415,17 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // Script for sticky header behavior
+      const topbar = document.querySelector(".topbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+          topbar.classList.add("scrolled");
+        } else {
+          topbar.classList.remove("scrolled");
+        }
+      });
+    </script>
   </body>
 </html>
