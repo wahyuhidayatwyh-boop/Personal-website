@@ -1589,8 +1589,6 @@
                   style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; opacity: 1; transition: opacity 0.3s ease;" />
                 <img id="imgBarberMobile" src="Image/fotobarber.png" alt="BarberGo Mobile App" class="shadow-sm"
                   style="max-height: 100%; max-width: 100%; object-fit: contain; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.3s ease; border-radius: 10px;" />
-                <img id="imgBarberMobile" src="Image/fotobarber.png" alt="BarberGo Mobile App" class="shadow-sm"
-                  style="max-height: 100%; max-width: 100%; object-fit: contain; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.3s ease; border-radius: 10px; display: block;" />
               </div>
               <p class="section-desc">
                 <b>BarberGo</b> adalah solusi ekosistem digital inovatif berupa aplikasi mobile dan web dashboard untuk
@@ -2521,6 +2519,28 @@
 
     refreshQuote.addEventListener("click", loadQuote);
     loadQuote();
+
+    // Toggle BarberGo Views
+    function toggleBarberView(view) {
+      const btnWeb = document.getElementById("btnBarberWeb");
+      const btnMobile = document.getElementById("btnBarberMobile");
+      const imgWeb = document.getElementById("imgBarberWeb");
+      const imgMobile = document.getElementById("imgBarberMobile");
+
+      if (!btnWeb || !btnMobile || !imgWeb || !imgMobile) return;
+
+      if (view === "web") {
+        btnWeb.classList.replace("btn-outline-dark", "btn-dark");
+        btnMobile.classList.replace("btn-dark", "btn-outline-dark");
+        imgWeb.style.opacity = "1";
+        imgMobile.style.opacity = "0";
+      } else {
+        btnMobile.classList.replace("btn-outline-dark", "btn-dark");
+        btnWeb.classList.replace("btn-dark", "btn-outline-dark");
+        imgMobile.style.opacity = "1";
+        imgWeb.style.opacity = "0";
+      }
+    }
 
   </script>
 </body>
