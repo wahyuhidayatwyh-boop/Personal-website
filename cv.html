@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV – Wahyu Hidayat | Fullstack Developer &amp; IoT Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:     #111111;
+      --muted:   #555555;
+      --light:   #888888;
+      --border:  #d8d8d8;
+      --bg:      #f7f7f5;
+      --white:   #ffffff;
+      --blue:    #1d4ed8;
+      --blue-light: #dbeafe;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 10.5pt;
+      line-height: 1.55;
+    }
+
+    /* LAYOUT */
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto 2rem;
+      background: var(--white);
+      box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+      display: grid;
+      grid-template-columns: 68mm 1fr;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      background: var(--ink);
+      color: #fff;
+      padding: 2.2rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+    .sidebar-photo {
+      width: 90px; height: 90px;
+      border-radius: 50%; object-fit: cover;
+      border: 3px solid rgba(255,255,255,0.25);
+      margin: 0 auto 0.4rem; display: block;
+    }
+    .sidebar-name { text-align: center; font-size: 1.15rem; font-weight: 800; line-height: 1.25; }
+    .sidebar-title {
+      text-align: center; font-size: 0.72rem; font-weight: 500;
+      color: rgba(255,255,255,0.65); margin-top: 0.25rem;
+      text-transform: uppercase; letter-spacing: 0.1em;
+    }
+    .sb-section { display: flex; flex-direction: column; gap: 0.5rem; }
+    .sb-heading {
+      font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.18em; color: rgba(255,255,255,0.45);
+      padding-bottom: 0.35rem; border-bottom: 1px solid rgba(255,255,255,0.12);
+      margin-bottom: 0.2rem;
+    }
+    .sb-item { display: flex; flex-direction: column; gap: 0.05rem; }
+    .sb-label { font-size: 0.67rem; color: rgba(255,255,255,0.5); }
+    .sb-value { font-size: 0.78rem; font-weight: 600; word-break: break-all; }
+    .sb-value a { color: #fff; text-decoration: none; }
+
+    /* Skill bars */
+    .skill-row { display: flex; flex-direction: column; gap: 0.65rem; }
+    .sk-label-row { display: flex; justify-content: space-between; font-size: 0.72rem; }
+    .sk-pct { color: rgba(255,255,255,0.5); font-size: 0.68rem; }
+    .sk-bar { height: 5px; background: rgba(255,255,255,0.12); border-radius: 99px; overflow: hidden; }
+    .sk-fill { height: 100%; background: rgba(255,255,255,0.75); border-radius: 99px; }
+
+    /* Tags */
+    .tag-wrap { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+    .tag {
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 99px; padding: 0.15rem 0.55rem; font-size: 0.68rem; font-weight: 500;
+    }
+
+    /* MAIN */
+    .main { padding: 2rem 1.8rem; display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .cv-section { display: flex; flex-direction: column; gap: 0.7rem; }
+    .cv-section-title {
+      font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.18em; color: var(--blue);
+      padding-bottom: 0.35rem; border-bottom: 2px solid var(--blue-light);
+    }
+
+    /* Entries */
+    .entry { display: flex; flex-direction: column; gap: 0.18rem; }
+    .entry-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; }
+    .entry-title { font-size: 0.88rem; font-weight: 700; line-height: 1.3; }
+    .entry-org { font-size: 0.78rem; color: var(--muted); font-weight: 500; }
+    .entry-date {
+      font-size: 0.68rem; color: var(--light); white-space: nowrap;
+      padding: 0.1rem 0.5rem; border: 1px solid var(--border);
+      border-radius: 99px; flex-shrink: 0; align-self: flex-start; margin-top: 0.1rem;
+    }
+    .entry-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+    .entry-bullets { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.2rem; }
+    .entry-bullets li { font-size: 0.76rem; color: var(--muted); padding-left: 0.9rem; position: relative; }
+    .entry-bullets li::before { content: "▸"; position: absolute; left: 0; color: var(--blue); font-size: 0.7rem; top: 0.05rem; }
+
+    /* Project cards */
+    .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+    .proj-card {
+      border: 1px solid var(--border); border-radius: 8px;
+      padding: 0.65rem 0.8rem; display: flex; flex-direction: column;
+      gap: 0.3rem; background: #fafafa;
+    }
+    .proj-card-title { font-size: 0.8rem; font-weight: 700; }
+    .proj-card-role { font-size: 0.68rem; color: var(--blue); font-weight: 600; }
+    .proj-card-desc { font-size: 0.71rem; color: var(--muted); line-height: 1.45; }
+    .proj-card-link { font-size: 0.68rem; color: var(--blue); font-weight: 600; word-break: break-all; text-decoration: none; }
+    .proj-tag-wrap { display: flex; flex-wrap: wrap; gap: 0.2rem; }
+    .proj-tag {
+      background: var(--blue-light); color: var(--blue); border-radius: 99px;
+      padding: 0.1rem 0.45rem; font-size: 0.62rem; font-weight: 600;
+    }
+
+    /* Cert grid */
+    .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.45rem; }
+    .cert-item { display: flex; align-items: flex-start; gap: 0.4rem; font-size: 0.76rem; }
+    .cert-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); flex-shrink: 0; margin-top: 0.38rem; }
+
+    /* PRINT */
+    @media print {
+      body { background: white; font-size: 9.5pt; }
+      .page { width: 100%; min-height: auto; margin: 0; box-shadow: none; }
+      .no-print { display: none !important; }
+    }
+
+    /* PRINT BAR */
+    .print-bar {
+      display: flex; justify-content: center; gap: 0.75rem;
+      padding: 1.2rem; position: sticky; top: 0;
+      background: rgba(247,247,245,0.95); backdrop-filter: blur(8px);
+      z-index: 100; border-bottom: 1px solid var(--border);
+    }
+    .btn-print {
+      background: #111; color: #fff; border: none; border-radius: 10px;
+      padding: 0.55rem 1.4rem; font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem; font-weight: 600; cursor: pointer;
+    }
+    .btn-print:hover { background: #333; }
+    .btn-back {
+      background: transparent; color: #111; border: 1px solid var(--border);
+      border-radius: 10px; padding: 0.55rem 1.4rem;
+      font-family: 'Outfit', sans-serif; font-size: 0.9rem; font-weight: 600;
+      cursor: pointer; text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar no-print">
+    <a class="btn-back" href="index.html">&#8592; Kembali ke Portofolio</a>
+    <a class="btn-print" href="./Image/CV_Wahyu_Hidayat.pdf" target="_blank" download="CV_Wahyu_Hidayat.pdf" style="background: #ff3b00; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">&#128196; Unduh Dokumen Asli (PDF)</a>
+    <button class="btn-print" onclick="window.print()">&#128438; Cetak Halaman Ini</button>
+  </div>
+
+  <div class="page">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+      <div>
+        <img src="Image/foto1.png" alt="Foto Wahyu Hidayat" class="sidebar-photo" />
+        <div class="sidebar-name">Wahyu Hidayat</div>
+        <div class="sidebar-title">Fullstack Developer &amp; IoT Engineer</div>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-heading">Kontak</div>
+        <div class="sb-item">
+          <span class="sb-label">Email</span>
+          <span class="sb-value"><a href="mailto:wahyuhidayat.wyh@gmail.com">wahyuhidayat.wyh@gmail.com</a></span>
+        </div>
+        <div class="sb-item">
+          <span class="sb-label">Telepon</span>
+          <span class="sb-value">083843653251</span>
+        </div>
+        <div class="sb-item">
+          <span class="sb-label">Lokasi</span>
+          <span class="sb-value">Purwokerto, Jawa Tengah</span>
+        </div>
+        <div class="sb-item">
+          <span class="sb-label">LinkedIn</span>
+          <span class="sb-value"><a href="http://www.linkedin.com/in/wahyu-hidayat-2267103b4" target="_blank">wahyu-hidayat-2267103b4</a></span>
+        </div>
+        <div class="sb-item">
+          <span class="sb-label">GitHub</span>
+          <span class="sb-value"><a href="https://github.com/wahyuhidayatwyh-boop" target="_blank">wahyuhidayatwyh-boop</a></span>
+        </div>
+        <div class="sb-item">
+          <span class="sb-label">Portfolio</span>
+          <span class="sb-value"><a href="https://www.myportofolio.store/" target="_blank">myportofolio.store</a></span>
+        </div>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-heading">Keahlian</div>
+        <div class="skill-row">
+          <div>
+            <div class="sk-label-row"><span>Web &amp; UI/UX</span><span class="sk-pct">85%</span></div>
+            <div class="sk-bar"><div class="sk-fill" style="width:85%"></div></div>
+          </div>
+          <div>
+            <div class="sk-label-row"><span>IoT &amp; Big Data</span><span class="sk-pct">90%</span></div>
+            <div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div>
+          </div>
+          <div>
+            <div class="sk-label-row"><span>Network &amp; Cloud</span><span class="sk-pct">82%</span></div>
+            <div class="sk-bar"><div class="sk-fill" style="width:82%"></div></div>
+          </div>
+          <div>
+            <div class="sk-label-row"><span>Leadership</span><span class="sk-pct">90%</span></div>
+            <div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div>
+          </div>
+          <div>
+            <div class="sk-label-row"><span>Problem Solving</span><span class="sk-pct">90%</span></div>
+            <div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-heading">Tech Stack</div>
+        <div class="tag-wrap">
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">React</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Python</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">ESP32</span>
+          <span class="tag">Arduino</span>
+          <span class="tag">YOLO / CV</span>
+          <span class="tag">AWS Cloud</span>
+          <span class="tag">IBM Cloud</span>
+          <span class="tag">Figma</span>
+          <span class="tag">Git</span>
+          <span class="tag">Vercel</span>
+          <span class="tag">Fiber Optic</span>
+          <span class="tag">VPN</span>
+        </div>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-heading">Bahasa</div>
+        <div class="sb-item"><span class="sb-value">Bahasa Indonesia</span><span class="sb-label">Native</span></div>
+        <div class="sb-item"><span class="sb-value">Bahasa Inggris</span><span class="sb-label">Intermediate</span></div>
+      </div>
+    </aside>
+
+    <!-- ===== MAIN ===== -->
+    <main class="main">
+
+      <!-- PROFIL -->
+      <div class="cv-section">
+        <div class="cv-section-title">Profil</div>
+        <p class="entry-desc">
+          Mahasiswa S1 Teknik Informatika Telkom University Purwokerto (<strong>IPK 3.75/4.0</strong>) dengan pengalaman nyata sebagai <strong>Fullstack Developer</strong> membangun aplikasi web &amp; mobile end-to-end (React, Next.js, FastAPI, PostgreSQL/Supabase, AWS). Berpengalaman langsung mengembangkan portal digital enterprise BUMN di PT Angkasa Pura Indonesia (Injourney Airport), produk AI Chatbot, hingga Computer Vision. Terbukti andal memimpin tim teknis (CTO Startup, Ketua Umum organisasi) dan konsisten menjuarai kompetisi teknologi tingkat nasional.
+        </p>
+      </div>
+
+      <!-- PENGALAMAN -->
+      <div class="cv-section">
+        <div class="cv-section-title">Pengalaman &amp; Magang</div>
+        
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Frontend &amp; Backend Developer — Magang BUMN</div>
+              <div class="entry-org">PT Angkasa Pura Indonesia (Injourney Airport) · Kantor Regional IV</div>
+            </div>
+            <span class="entry-date">2026</span>
+          </div>
+          <ul class="entry-bullets">
+            <li>Merancang dan membangun portal web Single Entry Point untuk Divisi Airport Commercial Development yang mengintegrasikan seluruh data layanan komersial bandara lintas unit.</li>
+            <li>Mengembangkan backend REST API dan database menggunakan PostgreSQL melalui Supabase untuk mendukung dashboard operasional real-time.</li>
+            <li>Membangun antarmuka dashboard di sisi frontend dengan React, serta Sistem Manajemen Konten (CMS) responsif untuk pembaruan informasi bandara secara dinamis.</li>
+            <li>Tech Stack: React, FastAPI, PostgreSQL, Supabase, Vercel | Live: injourney-one.vercel.app</li>
+          </ul>
+        </div>
+
+        <div class="entry" style="margin-top: 0.8rem;">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Asisten Praktikum Jaringan Komputer</div>
+              <div class="entry-org">Telkom University Purwokerto</div>
+            </div>
+            <span class="entry-date">2026 – Sekarang</span>
+          </div>
+          <ul class="entry-bullets">
+            <li>Membimbing mahasiswa pada sesi praktikum jaringan, menjelaskan konsep protokol HTTP dan dasar jaringan komputer.</li>
+          </ul>
+        </div>
+
+        <div class="entry" style="margin-top: 0.8rem;">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Teknisi Jaringan (Magang)</div>
+              <div class="entry-org">PT. Telkom Akses</div>
+            </div>
+            <span class="entry-date">Jan 2021 – Mar 2021</span>
+          </div>
+          <ul class="entry-bullets">
+            <li>Instalasi jaringan kabel Fiber Optic pada tiang ODP dan pengecekan kabel pada ODC (Optical Distribution Cabinet).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- PROYEK WEBSITE -->
+      <div class="cv-section">
+        <div class="cv-section-title">Proyek Website</div>
+        <div class="proj-grid">
+          <div class="proj-card">
+            <div class="proj-card-title">Injourney Airport Portal</div>
+            <div class="proj-card-role">Fullstack Developer · Magang BUMN</div>
+            <div class="proj-tag-wrap">
+              <span class="proj-tag">React</span><span class="proj-tag">FastAPI</span><span class="proj-tag">PostgreSQL</span>
+            </div>
+            <p class="proj-card-desc">Portal digital terintegrasi sebagai single entry point Divisi Airport Commercial Development PT Angkasa Pura Indonesia Kantor Regional IV.</p>
+            <a class="proj-card-link" href="https://injourney-one.vercel.app/" target="_blank">injourney-one.vercel.app</a>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-card-title">SKI Telkom Purwokerto</div>
+            <div class="proj-card-role">Fullstack Developer</div>
+            <div class="proj-tag-wrap">
+              <span class="proj-tag">Multi-Role</span><span class="proj-tag">CMS</span><span class="proj-tag">Web App</span>
+            </div>
+            <p class="proj-card-desc">Website organisasi dengan tiga level akses (Admin / Admin Katalog / User) untuk manajemen konten syiar digital kampus.</p>
+            <a class="proj-card-link" href="https://www.skitelkompurwokerto.site" target="_blank">skitelkompurwokerto.site</a>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-card-title">Pesona HSS</div>
+            <div class="proj-card-role">Fullstack Developer</div>
+            <div class="proj-tag-wrap">
+              <span class="proj-tag">AI Chatbot</span><span class="proj-tag">CMS</span><span class="proj-tag">Portal Wisata</span>
+            </div>
+            <p class="proj-card-desc">Portal pariwisata interaktif Kab. Hulu Sungai Selatan dengan AI chatbot pemandu wisata dan CMS terintegrasi. Dibangun dalam satu hari.</p>
+            <a class="proj-card-link" href="https://pesona-hss.vercel.app/" target="_blank">pesona-hss.vercel.app</a>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-card-title">MyPortofolio.Store</div>
+            <div class="proj-card-role">Fullstack Developer</div>
+            <div class="proj-tag-wrap">
+              <span class="proj-tag">E-Commerce</span><span class="proj-tag">Personal Branding</span>
+            </div>
+            <p class="proj-card-desc">Platform personal branding sekaligus e-commerce untuk menampilkan layanan dan karya kepada calon klien secara profesional.</p>
+            <a class="proj-card-link" href="https://www.myportofolio.store/" target="_blank">myportofolio.store</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROYEK KOMPETISI -->
+      <div class="cv-section">
+        <div class="cv-section-title">Proyek Kompetisi &amp; Inovasi</div>
+        <div class="proj-grid">
+          <div class="proj-card">
+            <div class="proj-card-title">BarberGo</div>
+            <div class="proj-card-role">Fullstack Developer · ABP Project</div>
+            <div class="proj-tag-wrap">
+              <span class="proj-tag">Mobile App</span><span class="proj-tag">Web Dashboard</span><span class="proj-tag">UMKM</span>
+            </div>
+            <p class="proj-card-desc">Ekosistem booking barbershop: mobile app + web dashboard analitik dengan pembayaran digital untuk digitalisasi UMKM lokal.</p>
+            <a class="proj-card-link" href="https://barbergoid.vercel.app/admin/checkin" target="_blank">barbergoid.vercel.app</a>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-card-title">TelyuBiz</div>
+            <div class="proj-card-role">Frontend Developer · Capstone 2026</div>
+            <div class="proj-tag-wrap">
+              <span class="proj-tag">Marketplace</span><span class="proj-tag">Juara 2</span>
+            </div>
+            <p class="proj-card-desc">Platform marketplace digital produk inovatif mahasiswa Telkom University. Meraih <strong>Juara 2 Capstone Project 2026</strong>.</p>
+            <a class="proj-card-link" href="https://telyu.biz.id" target="_blank">telyu.biz.id</a>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-card-title">ParkVision 2.0</div>
+            <div class="proj-card-role">Developer · KlikStart V3.0</div>
+            <div class="proj-tag-wrap">
+              <span class="proj-tag">Computer Vision</span><span class="proj-tag">YOLO</span><span class="proj-tag">Digital Twin</span>
+            </div>
+            <p class="proj-card-desc">Smart Parking berbasis Computer Vision (YOLO) dan Digital Twin untuk Smart Campus Telkom University dengan booking slot real-time.</p>
+            <a class="proj-card-link" href="https://parkvision-seven.vercel.app/" target="_blank">parkvision-seven.vercel.app</a>
+          </div>
+
+          <div class="proj-card">
+            <div class="proj-card-title">Mycelite</div>
+            <div class="proj-card-role">Developer · BD.il FEST 2026</div>
+            <div class="proj-tag-wrap">
+              <span class="proj-tag">Inovasi Digital</span><span class="proj-tag">ITB STIKOM Bali</span>
+            </div>
+            <p class="proj-card-desc">Proyek inovasi kompetisi BD.il FEST 2026 bertema "Explore, Innovate, Compete" di Institut Teknologi dan Bisnis STIKOM Bali.</p>
+            <a class="proj-card-link" href="https://mycelite.vercel.app/" target="_blank">mycelite.vercel.app</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PENDIDIKAN -->
+      <div class="cv-section">
+        <div class="cv-section-title">Pendidikan</div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">S1 Teknik Informatika</div>
+              <div class="entry-org">Telkom University Purwokerto</div>
+            </div>
+            <span class="entry-date">2023 – Sekarang</span>
+          </div>
+          <ul class="entry-bullets">
+            <li>Juara 2 Capstone Project – Computing Project 2026 (Tim TelyuBiz)</li>
+            <li>Aktif sebagai Ketua Umum SKI &amp; Wakil Ketua Umum Telcomnicavoice</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Teknik Komputer &amp; Jaringan</div>
+              <div class="entry-org">SMK Telkom Banjarbaru</div>
+            </div>
+            <span class="entry-date">2020 – 2023</span>
+          </div>
+          <ul class="entry-bullets">
+            <li>Fokus jaringan komputer, fiber optic, dan keamanan jaringan</li>
+            <li>Sertifikat Kompetensi – Junior Network Administrator</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ORGANISASI -->
+      <div class="cv-section">
+        <div class="cv-section-title">Organisasi</div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Ketua Umum – SKI (Syiar Keislaman &amp; Intelektualitas)</div>
+              <div class="entry-org">Telkom University Purwokerto</div>
+            </div>
+            <span class="entry-date">2024 – 2025</span>
+          </div>
+          <ul class="entry-bullets">
+            <li>Memimpin pengembangan website organisasi multi-role berbasis CMS</li>
+            <li>Mengelola tim &amp; kegiatan syiar digital kampus</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Wakil Ketua Umum – Telcomnicavoice</div>
+              <div class="entry-org">Telkom University Purwokerto</div>
+            </div>
+            <span class="entry-date">2024 – 2025</span>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Ketua Pelaksana Pre-Competition – Hipmi PT</div>
+              <div class="entry-org">Telkom University Purwokerto</div>
+            </div>
+            <span class="entry-date">2024</span>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Staff Divisi Eksternal – Hipmi PT Harmoni</div>
+              <div class="entry-org">Telkom University Purwokerto</div>
+            </div>
+            <span class="entry-date">2023 – 2024</span>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Staff Divisi Syiar – SKI</div>
+              <div class="entry-org">Telkom University Purwokerto</div>
+            </div>
+            <span class="entry-date">2023 – 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRESTASI -->
+      <div class="cv-section">
+        <div class="cv-section-title">Prestasi &amp; Penghargaan</div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Gold Award – Inovatech Recognition 2025</div>
+              <div class="entry-org">Kompetisi Teknologi &amp; Inovasi Nasional</div>
+            </div>
+            <span class="entry-date">2025</span>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Juara 2 – Capstone Project Computing 2026</div>
+              <div class="entry-org">Prodi Informatika Telkom University Purwokerto · Tim TelyuBiz</div>
+            </div>
+            <span class="entry-date">2026</span>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Finalis – Inkubasi Bisnis BTP</div>
+              <div class="entry-org">Business Technology Program – Bisnis Digital</div>
+            </div>
+            <span class="entry-date">2025</span>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Essay Inovasi Teknologi</div>
+              <div class="entry-org">Kompetisi Essay Nasional – Inovasi Digital</div>
+            </div>
+            <span class="entry-date">2024</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERTIFIKASI -->
+      <div class="cv-section">
+        <div class="cv-section-title">Sertifikasi &amp; Lisensi</div>
+        <div class="cert-grid">
+          <div class="cert-item"><span class="cert-dot"></span><span>AWS Academy Graduate – Cloud Foundations</span></div>
+          <div class="cert-item"><span class="cert-dot"></span><span>Sertifikat Kompetensi – Junior Network Administrator</span></div>
+          <div class="cert-item"><span class="cert-dot"></span><span>Big Data 101 – IBM / Dicoding</span></div>
+          <div class="cert-item"><span class="cert-dot"></span><span>NoSQL and DBaaS 101 – IBM / Dicoding</span></div>
+          <div class="cert-item"><span class="cert-dot"></span><span>Introduction to Cybersecurity – Cisco Networking Academy</span></div>
+          <div class="cert-item"><span class="cert-dot"></span><span>Pelatihan IoT &amp; Web Integration</span></div>
+          <div class="cert-item"><span class="cert-dot"></span><span>Integrasi Blynk &amp; ESP32 – IoT Practicum</span></div>
+          <div class="cert-item"><span class="cert-dot"></span><span>Simulator Zero Downtime Aplikasi</span></div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>
